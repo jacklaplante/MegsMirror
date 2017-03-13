@@ -1,0 +1,260 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/top">
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_meg_message"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="50dp"-->
+        <!--tools:text="I love you!"/>-->
+
+        <TextView
+            android:id="@+id/tv_calendar_event"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="36dp"
+            tools:text="I love you!"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                <TextClock
+                    android:id="@+id/tc_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="-32dp"
+                    android:layout_marginBottom="35dp"
+                    android:format12Hour="h:mm"
+                    android:format24Hour="kk:mm"
+                    android:textColor="@color/white"
+                    android:textSize="200dp"/>
+
+            </LinearLayout>
+
+            <TextClock
+                android:id="@+id/tc_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:format12Hour="dd MMM yyyy"
+                android:format24Hour="dd MMM yyyy"
+                android:textColor="@color/white"
+                android:textSize="54dp"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/tv_last_updated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
+                android:paddingLeft="64dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="italic"
+                tools:text="Last updated: 26 minutes ago"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/weather_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_current_weather"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_weather_partlycloudy"/>
+
+            <TextView
+                android:id="@+id/tv_current_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="50dp"
+                tools:text="6ºC"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_forecast_weather1"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_weather_partlycloudy"/>
+
+            <TextView
+                android:id="@+id/tv_forecast_temp1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                tools:text="10/10ºC"/>
+
+            <TextView
+                android:id="@+id/tv_forecast_date1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                tools:text="5 jan"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_forecast_weather2"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_weather_sunny"/>
+
+            <TextView
+                android:id="@+id/tv_forecast_temp2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                tools:text="10/10ºC"/>
+
+            <TextView
+                android:id="@+id/tv_forecast_date2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                tools:text="6 jan"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_forecast_weather3"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_weather_sleet"/>
+
+            <TextView
+                android:id="@+id/tv_forecast_temp3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                tools:text="10/10ºC"/>
+
+            <TextView
+                android:id="@+id/tv_forecast_date3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                tools:text="7 jan"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_forecast_weather4"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                tools:src="@drawable/ic_weather_partlycloudy"/>
+
+            <TextView
+                android:id="@+id/tv_forecast_temp4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                tools:text="10/10ºC"/>
+
+            <TextView
+                android:id="@+id/tv_forecast_date4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                tools:text="8 jan"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
